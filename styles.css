@@ -3,12 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Body */
+/* BODY */
 body {
   padding-top: 80px; /* space for fixed header */
   font-family: "Poppins", sans-serif;
@@ -67,13 +68,19 @@ body {
   margin-top: 10px;
 }
 
-/* Menu link hover */
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
 nav a:hover {
   color: #6b5cff;
   transform: translateY(-1px);
 }
 
-/* Active menu link */
 nav a.active {
   color: #6b5cff;
   font-weight: 600;
@@ -123,7 +130,7 @@ nav a.active {
   }
 }
 
-/* EXTRA SMALL MOBILE (optional) */
+/* EXTRA SMALL MOBILE */
 @media (max-width: 400px) {
   .site-header {
     padding: 8px 12px;
@@ -144,48 +151,6 @@ nav a.active {
   .site-header nav a {
     font-size: 0.95rem;
   }
-}
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-  color: #6b5cff;
-  transform: translateY(-1px);
-}
-/* Social icons hover effect (Instagram + Facebook) */
-.social-link i,
-.social-link svg {
-  transition: transform 0.3s ease, fill 0.3s ease; /* smooth movement + color */
-}
-
-/* Move up on hover */
-.social-link:hover i,
-.social-link:hover svg {
-  transform: translateY(-3px);
-}
-
-/* Color change on hover */
-.social-link:hover i {
-  color: #f58529; /* Instagram icon color */
-}
-
-.social-link:hover svg path {
-  fill: #f58529; /* Facebook icon color matches Instagram */
-}
-
-nav a.active {
-  color: #6b5cff;
-  font-weight: 600;
 }
 
 /* HERO */
