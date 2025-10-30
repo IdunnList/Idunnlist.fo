@@ -132,6 +132,18 @@ nav a.active {
   }
 }
 
+/* Desktop header */
+@media (min-width: 601px) {
+  .site-header {
+    flex-direction: row;      /* logo + social + nav in a row */
+    align-items: center;
+  }
+
+  .site-header nav {
+    margin-top: 0;            /* remove extra top margin */
+  }
+}
+
 /* EXTRA SMALL MOBILE */
 @media (max-width: 400px) {
   .site-header {
