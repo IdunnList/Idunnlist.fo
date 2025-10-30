@@ -1,4 +1,6 @@
-/* RESET + BASE */
+/* ===============================
+   RESET + BASE
+   =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* BODY */
 body {
   padding-top: 80px; /* space for fixed header */
   font-family: "Poppins", sans-serif;
@@ -21,18 +22,18 @@ body {
   margin: 0;
 }
 
-/* HEADER */
+/* ===============================
+   HEADER
+   =============================== */
 .site-header {
   display: flex;
   flex-direction: column;       /* stack nav under top row */
   padding: 1.2rem 2.5rem;
-
   position: fixed;              /* stays at the top */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -86,7 +87,7 @@ nav a.active {
   font-weight: 600;
 }
 
-/* Social icons hover (Instagram + Facebook) */
+/* Social icons hover effect (Instagram + Facebook) */
 .social-link i,
 .social-link svg {
   transition: transform 0.3s ease, fill 0.3s ease;
@@ -105,14 +106,15 @@ nav a.active {
   fill: #f58529; /* Facebook matches Instagram */
 }
 
-/* MOBILE HEADER */
+/* ===============================
+   MOBILE HEADER
+   =============================== */
 @media (max-width: 600px) {
   .site-header {
     flex-wrap: wrap;
     padding: 10px 15px;
   }
 
-  /* Keep logo + social icons in one row */
   .site-header .logo,
   .site-header .social-link {
     display: inline-block;
@@ -153,7 +155,9 @@ nav a.active {
   }
 }
 
-/* HERO */
+/* ===============================
+   HERO SECTION
+   =============================== */
 .hero {
   text-align: center;
   padding: 5rem 1rem 4rem;
@@ -196,7 +200,9 @@ nav a.active {
   transform: scale(1.05);
 }
 
-/* ABOUT SECTION */
+/* ===============================
+   ABOUT SECTION
+   =============================== */
 .about {
   background: white;
   padding: 4rem 1.5rem;
@@ -219,7 +225,9 @@ nav a.active {
   line-height: 1.7;
 }
 
-/* GALLERY */
+/* ===============================
+   GALLERY
+   =============================== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -265,7 +273,9 @@ nav a.active {
   text-align: left;
 }
 
-/* CTA Section */
+/* ===============================
+   CTA SECTION
+   =============================== */
 .cta {
   background: linear-gradient(135deg, #b8e4ff, #c8b6ff);
   text-align: center;
@@ -278,7 +288,9 @@ nav a.active {
   margin-bottom: 1.5rem;
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+   =============================== */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -288,7 +300,9 @@ footer {
   border-top: 1px solid #eee;
 }
 
-/* ANIMATIONS */
+/* ===============================
+   ANIMATIONS
+   =============================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
@@ -314,7 +328,9 @@ footer {
   }
 }
 
-/* ARTWORK PAGE */
+/* ===============================
+   ARTWORK PAGE
+   =============================== */
 .art-page {
   flex: 1;
   display: flex;
@@ -357,7 +373,9 @@ footer {
   line-height: 1.6;
 }
 
-/* CONTACT PAGE */
+/* ===============================
+   CONTACT PAGE
+   =============================== */
 .contact-page {
   max-width: 700px;
   margin: 4rem auto;
@@ -400,64 +418,4 @@ footer {
 .contact-card li {
   margin: 0.5rem 0;
   font-size: 1rem;
-}
 
-.contact-card a {
-  color: #6b5cff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.contact-card a:hover {
-  text-decoration: underline;
-}
-
-/* BACK BUTTON */
-.back-btn {
-  color: #6b5cff;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.back-btn:hover {
-  color: #8f7eff;
-}
-
-/* SIMPLE ANIMATION CLASS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.2s;
-}
-
- /* Style all font awesome icons */
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-} 
