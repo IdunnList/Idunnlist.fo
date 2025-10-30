@@ -89,6 +89,26 @@ nav a:hover {
   color: #6b5cff;
   transform: translateY(-1px);
 }
+/* Social icons hover effect (Instagram + Facebook) */
+.social-link i,
+.social-link svg {
+  transition: transform 0.3s ease, fill 0.3s ease; /* smooth movement + color */
+}
+
+/* Move up on hover */
+.social-link:hover i,
+.social-link:hover svg {
+  transform: translateY(-3px);
+}
+
+/* Color change on hover */
+.social-link:hover i {
+  color: #f58529; /* Instagram icon color */
+}
+
+.social-link:hover svg path {
+  fill: #f58529; /* Facebook icon color matches Instagram */
+}
 
 nav a.active {
   color: #6b5cff;
