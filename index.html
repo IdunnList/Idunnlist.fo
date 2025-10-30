@@ -8,82 +8,83 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 </head>
 
 <body>
     <!-- Header -->
     <header class="site-header">
-        <!-- Her kanst tú broyta yvirskriftina/logo sum er ovast í vinstra horninum -->
-        <h1 class="logo">🎨 Iðunn List</h1>
-        <nav>
-            <a href="index.html" class="active">Heim</a>
-            <a href="contact.html">Samband</a>
-            <!-- Instagram Icon -->
-            <a href="https://www.instagram.com/idunnlist/" target="_blank" class="social-link"
-                aria-label="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-          <!-- Facebook Icon -->
-<a href="https://www.facebook.com/idunnhusagardi/" target="_blank" class="social-link" aria-label="Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 320 512" class="social-icon">
-        <path d="M279.14 288l14.22-92.66h-88.91V146.14c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.17 44.38-121.17 124.72V195.3H22.89V288h81.3v224h100.2V288z"/>
-    </svg>
-</a>
-        </nav>
+        <div class="header-top">
+            <!-- Logo on the left -->
+            <h1 class="logo">🎨 Iðunn List</h1>
+
+            <!-- Navigation + Social Icons on the right -->
+            <div class="nav-social">
+                <nav>
+                    <a href="index.html" class="active">Heim</a>
+                    <a href="contact.html">Samband</a>
+                </nav>
+
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com/idunnlist/" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+
+                <!-- Facebook Icon -->
+                <a href="https://www.facebook.com/idunnhusagardi/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 320 512" class="social-icon">
+                        <path d="M279.14 288l14.22-92.66h-88.91V146.14c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.17 44.38-121.17 124.72V195.3H22.89V288h81.3v224h100.2V288z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-
-            <!-- Her kanst tú seta tað stóru yvirskriftina á síðuni -->
             <h2>Iðunn Janusardóttir Horn</h2>
-
-            <!-- Her kanst tú greiða frá um hvat hetta er fyri síða ella hvør tú ert ella okkurt sovorið -->
             <p>
                 List við íblástri úr føroyskari mentan, sagnum og náttúru.
-      
             </p>
+        </div>
     </section>
 
     <!-- Gallery Section -->
     <main id="gallery" class="gallery">
-
+        <!-- Gallery items go here -->
     </main>
 
     <!-- Call to Action Section -->
-    <!-- Hetta er tann niðasta sektiónin. Aftur her kanst tú broyta tekstin til tað tú vil hava -->
     <section class="cta">
         <h2>Bílegg tín egna málning - Ella keyp ein omanfyri </h2>
         <a href="contact.html" class="cta-btn">Set teg í samband við meg</a>
     </section>
 
     <!-- Footer -->
-    <!-- Hetta er trade mark teksturin niðast, um tú vilt hava hann. Kanst broyta navnið til títt fulla navn ella hvat tað skuldi verið -->
     <footer>
         <p>&copy; Iðunn List </p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script>
-  let lastScroll = 0;
-  const header = document.querySelector('.site-header');
+        let lastScroll = 0;
+        const header = document.querySelector('.site-header');
 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll && window.innerWidth <= 600) {
-      // Scrolling down on mobile — hide header
-      header.style.top = '-100px';
-    } else {
-      // Scrolling up — show header
-      header.style.top = '0';
-    }
+            if (currentScroll > lastScroll && window.innerWidth <= 600) {
+                // Scrolling down on mobile — hide header
+                header.style.top = '-100px';
+            } else {
+                // Scrolling up — show header
+                header.style.top = '0';
+            }
 
-    lastScroll = currentScroll;
-  });
-</script>
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 
 </html>
