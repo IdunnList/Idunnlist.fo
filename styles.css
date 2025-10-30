@@ -32,6 +32,46 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
+/* Logo */
+.site-header .logo {
+  max-width: 200px; /* desktop size */
+  height: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+.site-header nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Mobile header */
+@media (max-width: 600px) {
+  .site-header {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  /* Keep logo + social icons in one row */
+  .site-header .logo,
+  .site-header .social-link {
+    display: inline-block;
+  }
+
+  .site-header nav {
+    flex-direction: column; /* stack links only */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .site-header nav a {
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
