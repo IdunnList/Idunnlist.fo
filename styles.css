@@ -98,35 +98,45 @@ body {
 .nav-social .social-link:hover svg path {
   fill: #f58529; /* Facebook */
 }
-
 /* MOBILE HEADER */
 @media (max-width: 600px) {
   .site-header {
-    position: fixed;   /* stays at top */
+    position: fixed;      /* stays at the top initially */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+    background: rgba(255, 255, 255, 0.85); /* optional blur */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    pointer-events: auto; /* clickable when visible */
   }
 
-  /* Stack nav links vertically */
-  .site-header nav {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-social {
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
   }
 
-  .site-header nav a {
+  .nav-social nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-social nav a {
     width: 100%;
     text-align: center;
     margin: 5px 0;
   }
 
-  /* Stack social icons */
-  .social-icons {
+  .nav-social .social-link {
     margin-top: 8px;
-    justify-content: center;
-    width: 100%;
   }
 }
 
