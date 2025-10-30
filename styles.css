@@ -3,41 +3,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Body */
 body {
+  padding-top: 80px; /* space for fixed header */
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #fafaff, #f0f2ff);
   color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 /* HEADER */
 .site-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;       /* stack nav under top row */
   padding: 1.2rem 2.5rem;
+
+  position: fixed;              /* stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Top row: logo + social icons */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Logo */
 .site-header .logo {
-  max-width: 200px; /* desktop size */
+  max-width: 200px;
   height: auto;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 /* Navigation */
@@ -45,9 +64,41 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-top: 10px;
 }
 
-/* Mobile header */
+/* Menu link hover */
+nav a:hover {
+  color: #6b5cff;
+  transform: translateY(-1px);
+}
+
+/* Active menu link */
+nav a.active {
+  color: #6b5cff;
+  font-weight: 600;
+}
+
+/* Social icons hover (Instagram + Facebook) */
+.social-link i,
+.social-link svg {
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.social-link:hover i,
+.social-link:hover svg {
+  transform: translateY(-3px);
+}
+
+.social-link:hover i {
+  color: #f58529; /* Instagram color */
+}
+
+.social-link:hover svg path {
+  fill: #f58529; /* Facebook matches Instagram */
+}
+
+/* MOBILE HEADER */
 @media (max-width: 600px) {
   .site-header {
     flex-wrap: wrap;
@@ -61,7 +112,7 @@ body {
   }
 
   .site-header nav {
-    flex-direction: column; /* stack links only */
+    flex-direction: column; /* stack links */
     width: 100%;
     margin-top: 10px;
   }
@@ -72,6 +123,28 @@ body {
   }
 }
 
+/* EXTRA SMALL MOBILE (optional) */
+@media (max-width: 400px) {
+  .site-header {
+    padding: 8px 12px;
+  }
+
+  .site-header .logo {
+    font-size: 1.3rem;
+  }
+
+  .social-icons {
+    gap: 6px;
+  }
+
+  .site-header nav {
+    gap: 12px;
+  }
+
+  .site-header nav a {
+    font-size: 0.95rem;
+  }
+}
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
