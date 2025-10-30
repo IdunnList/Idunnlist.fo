@@ -14,31 +14,42 @@
   <!-- Header -->
   <header class="site-header">
     <div class="header-top">
-      <!-- Logo on the left -->
+      <!-- Logo -->
       <h1 class="logo">🎨 Iðunn List</h1>
 
-      <!-- Navigation + Social Icons on the right -->
-      <div class="nav-social">
+      <!-- Navigation + Social Icons -->
+      <div class="nav-social" id="nav-menu">
         <nav>
           <a href="index.html" class="active">Heim</a>
           <a href="contact.html">Samband</a>
         </nav>
 
-        <!-- Instagram Icon -->
-        <a href="https://www.instagram.com/idunnlist/" target="_blank" class="social-link" aria-label="Instagram">
-          <i class="fa fa-instagram"></i>
-        </a>
-
-        <!-- Facebook Icon -->
-        <a href="https://www.facebook.com/idunnhusagardi/" target="_blank" class="social-link" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 320 512" class="social-icon">
-            <path
-              d="M279.14 288l14.22-92.66h-88.91V146.14c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.17 44.38-121.17 124.72V195.3H22.89V288h81.3v224h100.2V288z" />
-          </svg>
-        </a>
+        <div class="social-icons">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/idunnlist/" target="_blank" class="social-link" aria-label="Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/idunnhusagardi/" target="_blank" class="social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 320 512" class="social-icon">
+              <path d="M279.14 288l14.22-92.66h-88.91V146.14
+                 c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26
+                 S260.43 0 225.36 0c-73.22 0-121.17 44.38
+                 -121.17 124.72V195.3H22.89V288h81.3v224h100.2V288z" />
+            </svg>
+          </a>
+        </div>
       </div>
+
+      <!-- Burger Button (right side) -->
+      <button class="burger" id="burger-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -55,7 +66,7 @@
     <!-- Gallery items go here -->
   </main>
 
-  
+
   <!-- Call to Action Section -->
   <section class="cta">
     <h2>Bílegg tín egna málning - Ella keyp ein omanfyri </h2>
