@@ -1,0 +1,27 @@
+[
+  {
+    "file": "image1.jpg",
+    "title": "Lívið í havinum ",
+    "description": "description..."
+  },
+  {
+    "file": "image2.jpg",
+    "title": "Kópur",
+    "description": "description..."
+  },
+  {
+    "file": "image3.jpg",
+    "title": "Fliðufjøðra",
+    "description": "description..."
+  },
+  {
+    "file": "image4.jpg",
+    "title": "Fiskur",
+    "description": "Hetta er ein fiskur..."
+  },
+  {
+    "file": "image5.jpg",
+    "title": "Kráku ungi",
+    "description": "description..."
+  }
+]
