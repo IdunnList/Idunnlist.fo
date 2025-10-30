@@ -98,18 +98,21 @@ body {
 .nav-social .social-link:hover svg path {
   fill: #f58529; /* Facebook */
 }
+
 /* MOBILE HEADER */
 @media (max-width: 600px) {
   .site-header {
-    position: fixed;      /* stays at the top initially */
+    position: fixed;     
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.85); /* optional blur */
+    background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    pointer-events: auto; /* clickable when visible */
+    opacity: 1;
+    pointer-events: auto; 
+    transition: opacity 0.5s ease; /* smooth fade */
   }
 
   .header-top {
