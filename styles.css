@@ -1,115 +1,109 @@
 /* HEADER */
 .site-header {
-  display: flex;
-  flex-direction: row;            /* default desktop layout */
-  justify-content: space-between; /* logo left, nav+social right */
-  align-items: center;
-  padding: 1.2rem 2.5rem;
-
-  position: fixed;                /* stays at the top */
+  position: fixed;             /* stays at top */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: top 0.3s ease;      /* smooth hide/show on scroll */
+  padding: 1.2rem 2.5rem;
+  transition: top 0.3s ease;  /* smooth hide/show on mobile scroll */
 }
 
-/* Top row: logo + social icons */
+/* Top row: logo + nav + social icons */
 .header-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  /* logo left, nav+social right */
   align-items: center;
-  width: 100%;
 }
 
 /* Logo */
 .site-header .logo {
   max-width: 200px;
+  height: auto;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-/* Social icons */
-.social-icons {
+/* Nav + social container (right side) */
+.nav-social {
   display: flex;
-  gap: 10px;
-  margin-left: auto;  /* push social icons to the right */
+  align-items: center;
+  gap: 1.2rem;  /* spacing between nav and social icons */
 }
 
 /* Navigation */
-.site-header nav {
+.nav-social nav {
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
-/* Links */
-nav a {
-  margin-left: 1.5rem;
+.nav-social nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-nav a:hover {
+.nav-social nav a:hover {
   color: #6b5cff;
   transform: translateY(-1px);
 }
 
-nav a.active {
+.nav-social nav a.active {
   color: #6b5cff;
   font-weight: 600;
 }
 
-/* Social icons hover (Instagram + Facebook) */
-.social-link i,
-.social-link svg {
+/* Social icons hover */
+.nav-social .social-link i,
+.nav-social .social-link svg {
   transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.social-link:hover i,
-.social-link:hover svg {
+.nav-social .social-link:hover i,
+.nav-social .social-link:hover svg {
   transform: translateY(-3px);
 }
 
-.social-link:hover i {
-  color: #f58529; /* Instagram color */
+.nav-social .social-link:hover i {
+  color: #f58529; /* Instagram */
 }
 
-.social-link:hover svg path {
-  fill: #f58529; /* Facebook matches Instagram */
+.nav-social .social-link:hover svg path {
+  fill: #f58529; /* Facebook */
 }
 
 /* MOBILE HEADER */
 @media (max-width: 600px) {
-  .site-header {
-    flex-direction: column;       /* stack logo/nav/social */
+  .header-top {
+    flex-direction: column;
     align-items: flex-start;
-    padding: 10px 15px;
   }
 
-  .site-header .logo,
-  .site-header .social-link {
-    display: inline-block;
-  }
-
-  .site-header nav {
-    flex-direction: column;       /* stack links */
+  .nav-social {
+    flex-direction: column;
     width: 100%;
     margin-top: 10px;
   }
 
-  .site-header nav a {
+  .nav-social nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-social nav a {
+    width: 100%;
     text-align: center;
     margin: 5px 0;
   }
 
-  /* Hide header on scroll is handled by your JS */
+  .nav-social .social-link {
+    margin-top: 8px;
+  }
 }
 
 /* EXTRA SMALL MOBILE */
@@ -122,15 +116,15 @@ nav a.active {
     font-size: 1.3rem;
   }
 
-  .social-icons {
+  .nav-social {
     gap: 6px;
   }
 
-  .site-header nav {
+  .nav-social nav {
     gap: 12px;
   }
 
-  .site-header nav a {
+  .nav-social nav a {
     font-size: 0.95rem;
   }
 }
