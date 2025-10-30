@@ -430,4 +430,11 @@ footer {
 .contact-card li {
   margin: 0.5rem 0;
   font-size: 1rem;
+}
 
+/* MOBILE HEADER HIDE ON SCROLL */
+@media (max-width: 600px) {
+  .site-header {
+    transition: top 0.3s ease; /* smooth slide */
+  }
+}
