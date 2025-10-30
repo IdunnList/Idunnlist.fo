@@ -67,22 +67,29 @@
 <script>
 const header = document.querySelector('.site-header');
 
-// Add initial style for transition
+// Add smooth opacity transition
 header.style.transition = 'opacity 0.3s ease';
 header.style.opacity = '1';
 
 window.addEventListener('scroll', () => {
   if (window.scrollY === 0 && window.innerWidth <= 600) {
-    // At the very top — show header
+    // At the very top — fully visible
     header.style.opacity = '1';
-    header.style.pointerEvents = 'auto'; // makes links clickable
-  } else if (window.innerWidth <= 600) {
-    // Scrolled down — hide header
+    header.style.pointerEvents = 'auto';
+  } else if (window.scrollY > 20 && window.innerWidth <= 600) {
+    // Scrolled down — fully hidden
     header.style.opacity = '0';
-    header.style.pointerEvents = 'none'; // prevent clicking when hidden
+    header.style.pointerEvents = 'none';
+  } else if (window.scrollY > 0 && window.scrollY <= 20 && window.innerWidth <= 600) {
+    // Slight scroll — partially fade
+    const fade = 1 - (window.scrollY / 20);
+    header.style.opacity = fade.toString();
+    header.style.pointerEvents = 'auto';
   }
 });
 </script>
+
+
 </body>
 
 </html>
