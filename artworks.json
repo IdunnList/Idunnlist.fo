@@ -10,16 +10,6 @@
     "description": "20x20, Akrylmáling"
   },
   {
-    "file": "IMG_0477.heic",
-    "title": "Koffertfiskur",
-    "description": "18x24, Akrylmáling"
-  },
-  {
-    "file": "IMG_0486.heic",
-    "title": "Ulka",
-    "description": "18x24, Akrylmáling"
-  },
-  {
     "file": "Kopur.png",
     "title": "Kópur",
     "description": "30x30, Akrylmáling"
@@ -27,6 +17,16 @@
   {
     "file": "hogguslokkar.png",
     "title": "Høgguslokkar",
+    "description": "18x24, Akrylmáling"
+  },
+  {
+    "file": "koffertfiskur.png",
+    "title": "Koffertfiskur",
+    "description": "18x24, Akrylmáling"
+  },
+  {
+    "file": "ulka.png",
+    "title": "Ulka",
     "description": "18x24, Akrylmáling"
   }
 ]
